@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleof.org">
+<head>
+	<meta charset="utf-8" />
+	<title>N-Capas - Laboratorio No. 3</title>
+</head>
+<body>
+	<h1>Estudiante</h1>
+	<form th:action="@{/formData}" th:object="${student}" method="post">
+		<label>Nombre: </label>
+		<input type="text" th:field="*{nombre}"/><br/>
+		
+		<label>Apellido: </label>
+		<input type="text" th:field="*{apellido}"/><br/>
+		
+		<label>Fecha Entrada: </label>
+		<input type="text" th:field="*{fEntrada}"/><br/>
+		
+		<label>Carrera: </label>
+		<input type="text" th:field="*{carrera}"/><br/>
+		
+		<label>Activo: </label>
+		<input type="radio" th:field="*{estado}" th:value="${true}"/>
+		<label>Inactivo: </label>
+		<input type="radio" th:field="*{estado}" th:value="${false}"/>
+		<br/>
+		
+		<button type="submit">
+			Enviar
+		</button>
+	</form>
+</body>
+</html>

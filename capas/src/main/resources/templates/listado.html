@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleof.org">
+<head>
+	<meta charset="utf-8" />
+	<title>Listado - Laboratorio No. 3</title>
+</head>
+<body>
+	<table>
+		<thead>
+			<tr>
+				<th>Nombre</th>
+				<th>Apellido</th>
+				<th>Carrera</th>
+			</tr>
+		</thead>
+		<th:block th:each="estudiante, row: ${studentList}">
+			<tr>
+				<td th:text="${estudiante.nombre}"/>
+				<td th:text="${estudiante.apellido}"/>
+				<td th:text="${estudiante.carrera}"/>
+			</tr>
+		</th:block>
+	</table>
+</body>
+</html>
